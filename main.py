@@ -1,16 +1,28 @@
 #Function 1
 # Returns Area of Rectangle
-
+def rect_area(side):
+    return side**2
 #Function 2
-# Returns Surface Area of Rectangular Solid
+#Returns Surface Area of Rectangular Solid
+#written by Osvaldo Contreras
+def rect_surface_area():
+    """
+    Calculates the surface area of a cube by multiplying square by 6
 
-# Request the dimension of a solid rectangular object
+    Returns
+    -------
+    int : surface area of cube
+    """
+    return square * 6
 
-length = int(input("Enter the length of the the object as a integer: "))
-width = int(input("Enter the width of the the object as a integer: "))
-height = int(input("Enter the height of the the object as a integer: "))
 
-print("Length = ", length, "Width = ", width, "Height = ", height)
-print("Total Surface Area = ", str(rect_surface_area(length, width, height)))
-print("Area of the rectangle: " + str(rect_area(length, width)))
+#length of the sides of the cube
+side = int(input("Enter the length of the the side of the cube as an integer: "))
+
+#stores the value of the area of 1 face of the cube
+square = rect_area(side)
+
+print(f"Side = {str(side)}")
+print("Total Surface Area = ", str(rect_surface_area()))
+print("Area of the rectangle: " + str(rect_area(side)))
 
